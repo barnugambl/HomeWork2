@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/nav_home">
+
+    <fragment
+        android:id="@+id/nav_home"
+        android:name="com.example.filedemo3.HomeFragment"
+        android:label="Home"
+        tools:layout="@layout/fragment_home"
+         >
+        <action
+            android:id="@+id/action_nav_home_to_nav_dashboard"
+            app:destination="@id/nav_dashboard" />
+        <action
+            android:id="@+id/action_nav_home_to_nav_profile"
+            app:destination="@id/nav_profile" />
+        <action
+            android:id="@+id/action_nav_home_to_nav_notifications"
+            app:destination="@id/nav_notifications" />
+        <action
+            android:id="@+id/action_nav_home_to_nav_settings"
+            app:destination="@id/nav_settings" />
+    </fragment>
+    <fragment
+        android:id="@+id/nav_dashboard"
+        android:name="com.example.filedemo3.DashBordFragment"
+        android:label="Dashboard"
+        tools:layout="@layout/fragment_dashbord"
+         />
+    <fragment
+        android:id="@+id/nav_notifications"
+        android:name="com.example.filedemo3.NotificationFragment"
+        android:label="Notifications"
+        tools:layout="@layout/fragment_notification"
+         />
+    <fragment
+        android:id="@+id/nav_profile"
+        android:name="com.example.filedemo3.ProfileFragment"
+        android:label="Profile"
+        tools:layout="@layout/fragment_profile"
+         />
+    <fragment
+        android:id="@+id/nav_settings"
+        android:name="com.example.filedemo3.SubmitFragment"
+        android:label="Submit"
+        tools:layout="@layout/fragment_submit">
+        <action
+            android:id="@+id/action_submitFragment_to_resultFragment"
+            app:destination="@id/nav_result"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" >
+            <argument
+                android:name="inputText"
+                app:argType="string" />
+
+        </action>
+    </fragment>
+    <fragment
+        android:id="@+id/nav_result"
+        android:name="com.example.filedemo3.ResultFragment"
+        android:label="Result"
+        tools:layout="@layout/fragment_result" >
+        <argument
+            android:name="inputText"
+            app:argType="string" />
+    </fragment>
+</navigation>

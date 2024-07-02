@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">Nav</string>
+    <string name="home">Home</string>
+    <string name="dashboard">Dashboard</string>
+    <string name="notifications">Notifications</string>
+    <string name="profile">Profile</string>
+    <string name="settings">Settings</string>
+    <string name="result">Result</string>
+    <string name="enter_text">Введите Текст</string>
+    <string name="submit">Отправить</string>
+</resources>
