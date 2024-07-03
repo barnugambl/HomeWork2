@@ -25,17 +25,17 @@ class SubmitFragment : Fragment(R.layout.fragment_submit) {
         super.onViewCreated(view, savedInstanceState)
         binding.submitButton.setOnClickListener {
             onButtonClicked(it)
-
         }
     }
 
-    fun onButtonClicked(view: View) {
-        val text = binding.editText.text.toString()
-        if (text.isBlank()) {
-            Snackbar.make(binding.root, "Введите текст", Snackbar.LENGTH_SHORT).show()
-        } else {
-            val action = SubmitFragmentDirections.actionSubmitFragmentToResultFragment(text)
-            findNavController().navigate(action)
+            fun onButtonClicked(view: View) {
+                val text = binding.editText.text.toString()
+                if (text.isBlank()) {
+                    Snackbar.make(binding.root, "Введите текст", Snackbar.LENGTH_SHORT).show()
+                } else {
+                    val action = SubmitFragmentDirections.actionSubmitFragmentToResultFragment(text)
+                    findNavController().navigate(action)
+                }
+            }
         }
-    }
-}
+

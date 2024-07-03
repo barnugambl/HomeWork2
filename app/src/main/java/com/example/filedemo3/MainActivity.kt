@@ -12,6 +12,7 @@ import com.example.filedemo3.databinding.ActivityMainBinding
 
 
 class MainActivity : AppCompatActivity() {
+    //тест
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         val binding = ActivityMainBinding.inflate(layoutInflater)
